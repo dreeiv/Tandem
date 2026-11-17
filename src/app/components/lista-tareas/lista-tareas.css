@@ -1,0 +1,13 @@
+.tarea {
+  background-color: lightgray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.pendiente {
+  background-color: lightyellow;
+}
+
+.completada {
+  background-color: lightgreen;
+}

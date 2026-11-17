@@ -1,0 +1,11 @@
+<input
+  type="text"
+  placeholder="Escribe una tarea"
+  [(ngModel)]="textoTarea"
+>
+
+<button (click)="solicitarAgregar()">
+  Agregar tarea
+</button>
+
+<p>Texto ingresado: {{ textoTarea }}</p>

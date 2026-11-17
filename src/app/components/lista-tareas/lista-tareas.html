@@ -1,0 +1,23 @@
+<h2>Mis tareas pendientes</h2>
+
+<ul>
+    @for (tarea of tareas; track tarea) {
+    <li class="tarea" [class.completada]="tarea.completada" [class.pendiente]="!tarea.completada">
+
+        {{ tarea.nombre }}
+
+        @if (tarea.completada) {
+        <span>Completada</span>
+        } @else {
+        <span>Pendiente</span>
+        }
+
+        <button (click)="solicitarEliminacion(tarea)">
+            Eliminar
+        </button>
+        <button (click)="solicitarCambioEstado(tarea)">
+            Cambiar estado
+        </button>
+    </li>
+    }
+</ul>
