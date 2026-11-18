@@ -1,0 +1,16 @@
+<h1>Mis tareas</h1>
+
+<app-formulario-tarea
+  (agregar)="agregarTarea($event)"
+></app-formulario-tarea>
+
+<app-lista-tareas
+  [tareas]="tareaService.tareas()"
+  (eliminar)="eliminarTarea($event)"
+  (cambiarEstado)="cambiarEstado($event)"
+></app-lista-tareas>
+
+<app-estadisticas-tareas
+  [completadas]="tareaService.tareasCompletadas()"
+  [pendientes]="tareaService.tareasPendientes()"
+></app-estadisticas-tareas>
